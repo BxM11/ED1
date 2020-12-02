@@ -1,0 +1,169 @@
+<!-- https://monicaaeortiz.github.io/EDI/HTML_intro/index.html-->
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  	<meta charset="utf-8">
+   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Texturina:wght@200&display=swap" rel="stylesheet">
+	<title>Matchbox Car Replication</title>
+
+<style>
+
+
+  .flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.flex-container .box {
+  width: 33%;
+  line-height: 75px;
+  font-size: 30px;
+}
+
+	body{
+		background-color: LightGray;
+		font-family:'Open Sans Condensed';
+		padding: 30px;
+		margin-left: 20px;
+	}
+
+	h1, h2 {
+		font-family: 'Texturina'
+	}
+  figcaption{
+    text-align: center;
+  }
+
+
+   </style>
+
+   <style type = text/css>
+   .center{
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     width: 50%;
+   }
+   </style>
+
+</head>
+
+<body>
+
+	<h1>Car Reflection - 3D Printing</h1>
+
+  <h2> Summary</h2>
+
+	<p>The goal of this project was to create a replica
+    of a matchbox car using 3d printing.  The replica was
+    supposed to have a margin of error of <1%, and asthetically
+    resemble the car we were supposed to be copying.  Along the
+    way, we learned about the process of creating a digital 3d
+    design.</p>
+
+  <img class = "center" src = "3d car/Final Picture 1.jpg" alt = "envelope" style = "width: 40%">
+  <figcaption><i>The completed replica car (right), next to the original (left).</i></figcaption>
+
+	<h2> Guidelines</h2>
+	<p>These were the guidelines for the project:</p>
+
+  <ul>
+	<li>Car is designed as an intersection of 3 sketches</li>
+  <li>Design car with 1:1 ratio of replica</li>
+  <li>Size accuracy of +/- 1%</li>
+  <li>Design is exported as a .stl</li>
+  <li>File is exported as a .gcode to minimize support</li>
+  <li>File design is shared out as an embedded .stl on a .html webpage</li>
+	</ul>
+
+  <h2>Process & Project Steps</h2>
+  <p>Unlike the previous project, where I had alter the given project
+  steps in order to make the design work, I basically followed the given
+  steps for this project.  They were, in order:</p>
+
+  <ol>
+	<li>Chose a car to replicate, in my case a model Dodge Charger</li>
+  <li>Join and learn how to use OnShape</li>
+  <li>Create an engineering drawing of the car, which included:</li>
+  <ul>
+      <li>A side profile</li>
+      <li>A front profile</li>
+      <li>A top profile</li>
+      <li>An orthogonal drawing of the car</li>
+      <li>Measurements of each of the car's dimensions, measured with calipers</li>
+  </ul>
+  <li>Create a rectangular prism in onshape, and import the drawings of the sides to create a 3D envelope</li>
+  <li>Copy the imported images into an OnShape sketch</li>
+  <li>Remove the negative spaces left on the outside of the drawings</li>
+  <li>Add fillets and any extras which couldn't be modelled in before</li>
+  <li>Export the .stl file from OnShape to Cura, where it is sliced to prepare for printing</li>
+  <li>After slicing, export to printer as a .gcode file for printing</li>
+  </ol>
+
+  <h2> Setbacks & Solutions</h2>
+
+  <p>At the beginning of the project, we tried to use Fusion 360 for the project, but it had enough
+    security measures to keep out real users, so we couldn't use it, which was the first seback.
+    For most of the rest of of the project, I didn't have many significant setbacks.  Most of the process
+    just worked as intended.  However, I did have some minor problems.  The first was my lack of drawing,
+    skill, so I unsurprisingly produced an engineering drawing that had fairly inaccurate proportions.
+    Because there was no "direct to digitial" option for this project like there has been for most of the
+    other projects' designs, I had to live with my inaccurate drawing, which inevitably produced a 3d envelope
+    whose sides simply didn't fit properly together on the box which they were supposed to fit on.</p>
+
+  <img class = "center" src = "3d car/Original Envelope.png" alt = "envelope" style = "width: 40%">
+  <figcaption><i>The blue rectangle is the size that the sketches were supposed to be.  As you can see, I missed by quite a ways</i></figcaption>
+
+  <p>Fortunately, the car still looked the way it was supposed to.  Because I didn't have a way to fix the
+    drawings, or a way to make them more accurate, I just continued on, copying over the images into OnShape.
+    sketches. When finished, I just rescaled my sketches so that they fit each other, and kept going with the project.</p>
+
+  <img class = "center" src = "3d car/OnShape Sketches.png" alt = "sketches" style = "width: 40%">
+  <figcaption><center><i>The envelope, with onshape sketches, after being rescaled</i></center></figcaption>
+
+  <p>Another problem I had was when I tried to round the corners of my car in OnShape.  I had just
+    assumed that OnShape could just make a rounded corner with whatever radius, and if it didn't fit it would
+    just maximize the possible radius, or just chop off part of the circle used to make the radius to make it fit.
+    I was surprised, therefore, when I OnShape kept insisting that it couldn't resolve the sketch when I tried adding
+    radii much larger than were possible in the space provided.  Fortunately, the sketches resolved when I lowered the radius,
+    except for one part at the back that was tied into too many non-rounded corners and simply wouldn't resolve, so I
+    just left it.  The final problem was when I tried to print my car.  The printing surface on the 3d printer was dirty, so
+    the fillament didn't stick to the printing plate.  This was fixed by removing and cleaning the plate, then starting
+    the print again.  Luckily, there was nothing wrong with the design, and the car printed as it should have.  My
+    only self-criticism is that the margin of error was way above 1%, and over 10% on the x-axis.  Clearly, I didn't
+    meet the stated goal of 1% error, but I don't know how much I could have done about that, since that part relied
+    on drawing.</p>
+
+  <h2>Photos</h2>
+
+  <div class="flex-container">
+  <div class="box"><img src = "3d car/Final Picture 1.jpg" alt = "final 1" width = 90%></div>
+  <div class="box"><img src = "3d car/Final Picture 2.jpg" alt = "final 2" width = 90%></div>
+  <div class="box"><img src = "3d car/Final Picture 3.jpg" alt = "final 3" width = 90%></div>
+  </div>
+
+
+  <div class="flex-container">
+  <div class="box"><img src = "3d car/Final Picture 4.jpg" alt = "final 4" width = 90%></div>
+  <div class="box"><img src = "3d car/Final Picture 5.jpg" alt = "final 5" width = 90%></div>
+  <div class="box"><img src = "3d car/Final Picture 6.jpg" alt = "final 6" width = 90%></div>
+  </div>
+
+  <figcaption><i>The original (larger) and the replica (smaller) at different angles.
+  As you can see, the margin of error was well above 1%</i></figcaption>
+
+  <p>The .stl file: </p>
+
+
+  <div class='modelo-wrapper'> <div style="width: 100%; padding-bottom: 56.25%; position: relative">
+    <div style="position: absolute; top: 0; bottom: 0; left: 0; right: 0;">
+      <iframe src="https://app.modelo.io/embedded/MPO-wnqjFI?viewport=true&autoplay=true&autoRotate=false&hideTools=false"
+      style="width:100%;height:100%;" frameborder="0" mozallowfullscreen webkitallowfullscreen allowfullscreen ></iframe> </div> </div> </div>
+
+  <p>Disclaimer: The mechanism for using the div method and box class to make the images into a grid, used here,
+    was heavily based on the w3 schools tutorial code - I figured out how it worked but am still fairly unclear on the mechanics here; this isn't
+    my code and I don't want to take credit for it</p>
+
+</html>
