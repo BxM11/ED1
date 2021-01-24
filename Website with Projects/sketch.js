@@ -1,11 +1,10 @@
 function setup() {
-  var width = windowWidth;
-  var height = 1080;
-  createCanvas(width, height);
+  var height = 2080;
+  createCanvas(windowWidth, height);
   stroke(0);
   var rectheight = 100;
   var rectwidth = 200;
-  frameRate(0.2);
+  frameRate(1);
 }
 
 function draw() {
@@ -15,9 +14,10 @@ function draw() {
 
   width = windowWidth;
   var squares = 10;
-  var buffer = 30;
-  var squareSize = 20;
-  var space = ((width-2*buffer)/squares-squareSize)/2;
+  var buffer = 20;
+  var space = 10;
+  var squareSize = (width-2*buffer)/squares-2*space;
+
 
 
 
@@ -32,7 +32,9 @@ function draw() {
   for (var x = buffer; x<windowWidth-2*buffer; x += (windowWidth-2*buffer)/squares ){
     for(var y = buffer; y<height-2*buffer; y += (windowWidth-2*buffer)/squares){
       strokeWeight(1);
-      fill(y*255/(height-(squareSize+2*space)),0,0);
+      fill(y*255/(height-(squareSize+2*space)),
+           0,
+           0);
       quad(x+space,
            y+space,
           x+space+squareSize,
