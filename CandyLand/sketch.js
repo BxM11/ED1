@@ -1,5 +1,5 @@
 function setup() {
-  var height = 3000;
+  var height = 2080;
   createCanvas(windowWidth, height);
   stroke(0);
   var rectheight = 100;
